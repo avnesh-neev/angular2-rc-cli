@@ -1,3 +1,200 @@
-<p>
-  new-ticket works!
-</p>
+<!-- NEW FUEL TICKET ENTRY START -->
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-header">
+                    <h3>New Fuel Ticket Entry</h3>
+                </div>
+            </div>
+        </div>
+        <!-- 1st row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="so#" class="control-label">SO #</label>
+                    <input type="text" class="form-control" id="so#">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="basnumber" class="control-label">BAS Number</label>
+                    <input type="text" class="form-control" id="basnumber">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="cardnumber" class="control-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardnumber">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="customername" class="control-label">Customer Name</label>
+                    <input type="text" class="form-control" id="customername">
+                </div>
+            </div>
+        </div>
+        <!-- 1st row -->
+        <!-- 2nd row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group label-static">
+                    <label for="upliftdate" class="control-label">UpLift Date</label>
+                    <input type="date" class="form-control" id="upliftdate">
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="product" class="control-label">Product</label>
+                    <input type="text" class="form-control" id="product">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-static">
+                    <label for="usg" class="control-label">UOM</label>
+                    <input type="text" class="form-control" id="usg"  placeholder="USG">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="quality" class="control-label">Quality</label>
+                    <input type="text" class="form-control" id="quality">
+                </div>
+            </div>
+        </div>
+        <!-- 2nd row -->
+        <!-- 3rd row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="tailnumber" class="control-label">Tail Number</label>
+                    <input type="text" class="form-control" id="tailnumber">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="flight#" class="control-label">Flight #</label>
+                    <input type="text" class="form-control" id="flight#">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                    <label for="authorization#" class="control-label">Authorization #</label>
+                    <input type="text" class="form-control" id="authorization#">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group label-static">
+                    <label for="ticket#" class="control-label">Ticket #</label>
+                    <input type="text" class="form-control" id="ticket#" placeholder="1009">
+                </div>
+            </div>
+        </div>
+        <!-- 3rd row -->
+        <!-- 4th row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="domestic" value="domestic" checked=""><span class="circle"></span><span class="check"></span>
+                      Domestic
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="international" value="international"><span class="circle"></span><span class="check"></span>
+                      International
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="form-group label-floating is-empty">
+                    <label for="notes" class="control-label">Notes</label>
+                    <input type="text" class="form-control" id="notes">
+                </div>
+            </div>
+        </div>
+        <!-- 4th row -->
+    </div>
+
+    <!--FEE START  -->
+    <div class="container-fluid">
+        <!-- heading -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-header">
+                    <h3>Fee</h3>
+                </div>
+            </div>
+        </div>
+        <!-- heading -->
+        <!-- button Add fee -->
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block">Add Fee<div class="ripple-container"></div></a>
+            </div>
+        </div>
+        <!-- button Add fee -->
+        <!-- Fee List -->
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="add-fee">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="form-group label-floating is-empty">
+                                    <label for="feeitem" class="control-label">Fee Item</label>
+                                    <input type="text" class="form-control" id="feeitem">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group label-static">
+                                    <label for="feeusg" class="control-label">UOM</label>
+                                    <input type="text" class="form-control" id="feeusg"  placeholder="USG">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group label-floating is-empty">
+                                    <label for="qty" class="control-label">Qty</label>
+                                    <input type="text" class="form-control" id="qty">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group label-static">
+                                    <label for="currency" class="control-label">Currency</label>
+                                    <input type="text" class="form-control" id="currency"  placeholder="USD">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group label-floating is-empty">
+                                    <label for="unitprice" class="control-label">Unit Price</label>
+                                    <input type="text" class="form-control" id="unitprice">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-sm">Delete<div class="ripple-container"></div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fee List -->
+        <!-- button Add fee -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block">Submit<div class="ripple-container"></div></a>
+                </div>
+            </div>
+        </div>
+        <!-- button Add fee -->
+    </div>
+    <!--FEE END  -->
+</div>
+<!-- NEW FUEL TICKET ENTRY END-->
