@@ -6,6 +6,7 @@ import { HomeComponent } from './+home';
 import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from '@angular/router';
 import { NewTicketComponent } from './+new-ticket';
 import { ViewTicketsComponent } from './+view-tickets';
+import { ViewATicketComponent } from './+view-aticket';
 
 @Component({
   moduleId: module.id,
@@ -19,7 +20,8 @@ import { ViewTicketsComponent } from './+view-tickets';
 @Routes([
   {path: '/', component: HomeComponent},
   {path: '/newTicket', component: NewTicketComponent},
-  {path: '/viewTickets', component: ViewTicketsComponent}
+  {path: '/viewTickets', component: ViewTicketsComponent},
+  {path: '/viewATicket/:id', component: ViewATicketComponent}
 ])
 export class PROJECTNAMEAppComponent {
   title = 'project-name works!';
