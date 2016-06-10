@@ -9,8 +9,10 @@ import {ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 })
 export class ViewTicketsComponent implements OnInit {
-
-  constructor() {}
+	costomers: any;
+  constructor() {
+		this.costomers = [1, 2, 3, 4];
+  }
 
   ngOnInit() {
   }

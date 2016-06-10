@@ -140,12 +140,12 @@
         <!-- button Add fee -->
         <div class="row">
             <div class="col-sm-2">
-                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block">Add Fee<div class="ripple-container"></div></a>
+                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block" (click)="addFee()">Add Fee<div class="ripple-container"></div></a>
             </div>
         </div>
         <!-- button Add fee -->
         <!-- Fee List -->
-        <div class="row">
+        <div class="row" *ngFor="let fee of fees; let i = index">
             <div class="col-sm-8">
                 <div class="add-fee">
                     <div class="container-fluid">
@@ -182,7 +182,7 @@
                             </div>
                             <div class="col-sm-2 col-lg-2 col-md-4">
                                 <div class="form-group">
-                                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-sm">Delete<div class="ripple-container"></div></a>
+                                <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-sm" (click)="deleteFee(i)">Delete<div class="ripple-container"></div></a>
                                 </div>
                             </div>
                         </div>
