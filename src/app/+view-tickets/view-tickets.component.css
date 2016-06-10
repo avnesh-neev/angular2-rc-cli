@@ -10,8 +10,16 @@
 }
 
 .add-fee{
-    background:#f9f9f9; 
     border: 1px solid #dddddd;
-    margin-top:30px;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+.add-fee:nth-child(even){
+    background-color:#f9f9f9; 
+}
+.add-fee:nth-child(odd){
+    background-color:#ffffff; 
+}
+.add-fee:last-child{
     margin-bottom: 20px;
 }
