@@ -1,0 +1,16 @@
+.wrapper{
+    background: #fff;
+}
+.radio{
+    display: inline-block;
+    width: 49%;
+}
+.radio label{
+    font-size: 13px;
+}
+.add-fee{
+    background:#f9f9f9; 
+    border: 1px solid #dddddd;
+    margin-top:30px;
+    margin-bottom: 20px;
+}
