@@ -3,5 +3,9 @@
 }
 .navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, .navbar .navbar-nav>.active>a:hover{
     background-color: transparent;
-    font-weight: bold;
+    font-weight: normal;
+}
+
+.router-link-active {
+	font-weight: bold;
 }

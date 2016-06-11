@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import {ROUTER_DIRECTIVES, Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -10,7 +10,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
   }

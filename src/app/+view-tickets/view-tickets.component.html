@@ -17,36 +17,36 @@
                         <div class="col-sm-4 col-md-8 col-lg-4">
                             <div class="form-group label-static">
                                 <label for="customer" class="control-label">Customer</label>
-                                <input type="text" class="form-control" id="customer">
+                                <input type="text" class="form-control" id="customer" [(ngModel)]="costomer.customer_name">
                             </div>
                         </div>
                         <div class="col-sm-1 col-md-2 col-lg-1">
                             <div class="form-group label-static">
                                 <label for="ticketNo" class="control-label">Ticket#</label>
-                                <input type="text" class="form-control" id="ticketNo">
+                                <input type="text" class="form-control" id="ticketNo" [(ngModel)]="costomer.ticket_id">
                             </div>
                         </div>
                         <div class="col-sm-1 col-md-2 col-lg-1">
                             <div class="form-group label-static">
                                 <label for="tailNo" class="control-label">Tail#</label>
-                                <input type="text" class="form-control" id="tailNo">
+                                <input type="text" class="form-control" id="tailNo" [(ngModel)]="costomer.tail_no">
                             </div>
                         </div>
                         <div class="col-sm-1 col-md-2 col-lg-1">
                             <div class="form-group label-static">
                                 <label for="product" class="control-label">Product</label>
-                                <input type="text" class="form-control" id="product" placeholder="Product">
+                                <input type="text" class="form-control" id="product" placeholder="Product" [(ngModel)]="costomer.product">
                             </div>
                         </div>
                         <div class="col-sm-2 col-md-4 col-lg-2">
                             <div class="form-group label-static">
                                 <label for="upliftDate" class="control-label">Uplift Date</label>
-                                <input type="text" class="form-control" id="upliftDate">
+                                <input type="text" class="form-control" id="upliftDate" [(ngModel)]="costomer.upliftdate">
                             </div>
                         </div>
                         <div class="col-sm-3 col-md-6 col-lg-3">
                             <div class="form-group">
-                                <a class="btn btn-raised btn-primary btn-sm mR20" href="javascript:void(0)" [routerLink]="['../viewATicket/53']">View<div class="ripple-container"></div></a>
+                                <a class="btn btn-raised btn-primary btn-sm mR20" href="javascript:void(0)" [routerLink]="['../viewATicket/'+costomer.ticket_id]">View<div class="ripple-container"></div></a>
                                 <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-sm mR20">Credit<div class="ripple-container"></div></a>
                                 <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-sm">De-fuel<div class="ripple-container"></div></a>
                             </div>
