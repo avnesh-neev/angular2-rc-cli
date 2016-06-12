@@ -18,7 +18,7 @@ import { ViewATicketComponent } from './+view-aticket';
   providers: [ROUTER_PROVIDERS]
 })
 @Routes([
-  {path: '/', component: HomeComponent},
+  {path: '/', component: HomeComponent, as: 'Home'},
   {path: '/newTicket', component: NewTicketComponent},
   {path: '/viewTickets', component: ViewTicketsComponent},
   {path: '/viewATicket/:id', component: ViewATicketComponent}
