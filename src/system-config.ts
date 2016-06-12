@@ -40,6 +40,7 @@ const barrels: string[] = [
   'app/+new-ticket',
   'app/+view-tickets',
   'app/+view-aticket',
+  'app/validation-control-message',
   /** @cli-barrel */
 ];
 

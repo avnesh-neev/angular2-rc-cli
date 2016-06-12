@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/common';
+import { ValidationControlMessageComponent } from '../validation-control-message/validation-control-message.component';
+import { ValidationService } from '../validation-control-message/validation-control-message.service';
+
 
 @Component({
   moduleId: module.id,
   selector: 'app-new-ticket',
   templateUrl: 'new-ticket.component.html',
-  styleUrls: ['new-ticket.component.css']
+  styleUrls: ['new-ticket.component.css'],
+  directives: [ValidationControlMessageComponent]
 })
 export class NewTicketComponent implements OnInit {
 	fees: any;
-  constructor() {
+	newTicketForm: any;
+  constructor(private _formBuilder: FormBuilder) {
 		this.fees = [1, 2, 3];
+
+		this.newTicketForm = this._formBuilder.group({
+			'customername': ['', Validators.required]
+    });
   }
 
   deleteFee(index) {

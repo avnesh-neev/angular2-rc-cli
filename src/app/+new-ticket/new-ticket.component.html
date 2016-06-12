@@ -1,5 +1,5 @@
 <!-- NEW FUEL TICKET ENTRY START -->
-<div class="wrapper">
+<form class="wrapper" [ngFormModel]="newTicketForm">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -31,7 +31,8 @@
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="customername" class="control-label">Customer Name</label>
-                    <input type="text" class="form-control" id="customername">
+                    <input type="text" class="form-control" [(ngModel)]="customername" ngControl="customername" id="customername" required>
+                    <app-validation-control-message control="customername"></app-validation-control-message>
                 </div>
             </div>
         </div>
@@ -195,12 +196,12 @@
         <div class="row">
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group">
-                    <a href="javascript:void(0)" class="btn btn-raised btn-primary btn-block">Submit<div class="ripple-container"></div></a>
+                    <button type="submit" class="btn btn-raised btn-primary btn-block">Submit<div class="ripple-container"></div></button>
                 </div>
             </div>
         </div>
         <!-- button Add fee -->
     </div>
     <!--FEE END  -->
-</div>
+</form>
 <!-- NEW FUEL TICKET ENTRY END-->
