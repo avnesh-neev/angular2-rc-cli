@@ -1,5 +1,5 @@
 <!-- NEW FUEL TICKET ENTRY START -->
-<form class="wrapper" [ngFormModel]="newTicketForm">
+<form class="wrapper" [ngFormModel]="newTicketForm" (submit)="saveTicket()">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -13,26 +13,25 @@
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="so#" class="control-label">SO #</label>
-                    <input type="text" class="form-control" id="so#">
+                    <input type="text" class="form-control" id="so#" [(ngModel)]="ticket.soNumber" ngControl="soNumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="basnumber" class="control-label">BAS Number</label>
-                    <input type="text" class="form-control" id="basnumber">
+                    <input type="text" class="form-control" id="basnumber" [(ngModel)]="ticket.basNumber" ngControl="basNumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="cardnumber" class="control-label">Card Number</label>
-                    <input type="text" class="form-control" id="cardnumber">
+                    <input type="text" class="form-control" id="cardnumber" [(ngModel)]="ticket.cardnumber" ngControl="cardnumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="customername" class="control-label">Customer Name</label>
-                    <input type="text" class="form-control" [(ngModel)]="customername" ngControl="customername" id="customername" required>
-                    <app-validation-control-message control="customername"></app-validation-control-message>
+                    <input type="text" class="form-control" [(ngModel)]="ticket.customername" ngControl="customername" id="customername" required>
                 </div>
             </div>
         </div>
@@ -42,7 +41,7 @@
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-static">
                     <label for="upliftdate" class="control-label">UpLift Date</label>
-                    <input type="date" class="form-control" id="upliftdate">
+                    <input type="date" class="form-control" id="upliftdate" [(ngModel)]="ticket.upliftdate" ngControl="upliftdate" required>
               </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
@@ -61,13 +60,13 @@
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-static">
                     <label for="usg" class="control-label">UOM</label>
-                    <input type="text" class="form-control" id="usg"  placeholder="USG">
+                    <input type="text" class="form-control" id="usg"  placeholder="USG" [(ngModel)]="ticket.usg" ngControl="usg" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="quality" class="control-label">Quality</label>
-                    <input type="text" class="form-control" id="quality">
+                    <input type="text" class="form-control" id="quality" [(ngModel)]="ticket.quality" ngControl="quality" required>
                 </div>
             </div>
         </div>
@@ -77,25 +76,25 @@
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="tailnumber" class="control-label">Tail Number</label>
-                    <input type="text" class="form-control" id="tailnumber">
+                    <input type="text" class="form-control" id="tailnumber" [(ngModel)]="ticket.tailnumber" ngControl="tailnumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="flight#" class="control-label">Flight #</label>
-                    <input type="text" class="form-control" id="flight#">
+                    <input type="text" class="form-control" id="flight#" [(ngModel)]="ticket.flightNumber" ngControl="flightNumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-floating is-empty">
                     <label for="authorization#" class="control-label">Authorization #</label>
-                    <input type="text" class="form-control" id="authorization#">
+                    <input type="text" class="form-control" id="authorization#" [(ngModel)]="ticket.authorizationNumber" ngControl="authorizationNumber" required>
                 </div>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group label-static">
                     <label for="ticket#" class="control-label">Ticket #</label>
-                    <input type="text" class="form-control" id="ticket#" placeholder="1009">
+                    <input type="text" class="form-control" id="ticket#" placeholder="1009" [(ngModel)]="ticket.ticketNumber" ngControl="ticketNumber" required>
                 </div>
             </div>
         </div>
@@ -106,13 +105,13 @@
                 <div class="form-group">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="domestic" value="domestic" checked=""><span class="circle"></span><span class="check"></span>
+                      <input type="radio" name="domestic" value="domestic" checked="" [(ngModel)]="ticket.domestic"><span class="circle"></span><span class="check"></span>
                       Domestic
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="international" value="international"><span class="circle"></span><span class="check"></span>
+                      <input type="radio" name="international" value="international" [(ngModel)]="ticket.domestic"><span class="circle"></span><span class="check"></span>
                       International
                     </label>
                   </div>
@@ -121,7 +120,7 @@
             <div class="col-sm-9">
                 <div class="form-group label-floating is-empty">
                     <label for="notes" class="control-label">Notes</label>
-                    <input type="text" class="form-control" id="notes">
+                    <input type="text" class="form-control" id="notes" [(ngModel)]="ticket.notes" ngControl="notes" required>
                 </div>
             </div>
         </div>
@@ -196,7 +195,7 @@
         <div class="row">
             <div class="col-sm-3 col-md-6 col-lg-3">
                 <div class="form-group">
-                    <button type="submit" class="btn btn-raised btn-primary btn-block">Submit<div class="ripple-container"></div></button>
+                    <button type="submit" class="btn btn-raised btn-primary btn-block" [disabled]="!newTicketForm.valid">Submit<div class="ripple-container"></div></button>
                 </div>
             </div>
         </div>

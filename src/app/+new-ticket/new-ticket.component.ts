@@ -14,11 +14,23 @@ import { ValidationService } from '../validation-control-message/validation-cont
 export class NewTicketComponent implements OnInit {
 	fees: any;
 	newTicketForm: any;
+	ticket: any = {};
   constructor(private _formBuilder: FormBuilder) {
 		this.fees = [1, 2, 3];
 
 		this.newTicketForm = this._formBuilder.group({
-			'customername': ['', Validators.required]
+			'soNumber': ['', Validators.required],
+			'basNumber': ['', Validators.required],
+			'cardnumber':['', Validators.required],
+			'customername': ['', Validators.required],
+			'upliftdate': ['', Validators.required],
+			'usg': ['', Validators.required],
+			'quality': ['', Validators.required],
+			'tailnumber': ['', Validators.required],
+			'flightNumber': ['', Validators.required],
+			'authorizationNumber': ['', Validators.required],
+			'ticketNumber': ['', Validators.required],
+			'notes': ['', Validators.required]
     });
   }
 
@@ -37,6 +49,9 @@ export class NewTicketComponent implements OnInit {
 	addFee() {
 		this.fees.push(this.fees.length)
 		console.log(this.fees);
+  }
+  saveTicket() {
+		console.log(this.newTicketForm.value);
   }
 
   ngOnInit() {
